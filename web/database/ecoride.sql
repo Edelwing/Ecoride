@@ -54,14 +54,14 @@ CREATE TABLE role (
 CREATE TABLE utilisateur (
   `utilisateur_id` int(11) NOT NULL AUTO_INCREMENT,
   `nom` varchar(50) NOT NULL,
-  `prenom` varchar(50) NOT NULL,
+  `prenom` varchar(50),
   `email` varchar(50) NOT NULL,
   `password` varchar(50) NOT NULL,
-  `telephone` varchar(50) NOT NULL,
-  `adresse` varchar(50) NOT NULL,
-  `date_naissance` varchar(50) NOT NULL,
-  `photo` blob NOT NULL,
-  `pseudo` varchar(50) NOT NULL,
+  `telephone` varchar(50),
+  `adresse` varchar(50),
+  `date_naissance` varchar(50),
+  `photo` blob,
+  `pseudo` varchar(50),
   PRIMARY KEY (utilisateur_id)
 );
 

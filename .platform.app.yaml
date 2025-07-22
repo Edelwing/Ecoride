@@ -5,9 +5,11 @@ web:
   locations:
     '/':
       root: 'web'
-      index: index.php
+      index:
+        - index.php
       allow: true
-      passthru: '/index.php'
+      passthru: /index.php
+
 
 mounts:
   'web/uploads':

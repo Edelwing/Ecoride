@@ -274,17 +274,11 @@ const allRides = [
               </p>
             </div>
           </div>
-          <button class="btn btn-success mt-2 details-btn" data-id="${ride.id}" aria-label="Détails du covoiturage de ${ride.driver}">Détail</button>
+          <button class="btn btn-success mt-2 details-btn" data-id="${ride.id}" aria-label="Détails du covoiturage de ${ride.driver}" onclick="location.href='codrive_details.php'">Détail</button>
         `;
         container.appendChild(card);
-      });
+      })};
 
-      document.querySelectorAll(".details-btn").forEach((btn) => {
-        btn.addEventListener("click", () => {
-        location.replace("./web/codrive_details.php")
-        });
-      });
-    }
 
     document.getElementById("filterForm").addEventListener("submit", (e) => {
       e.preventDefault();

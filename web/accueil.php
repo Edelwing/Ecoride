@@ -39,21 +39,33 @@
         </div>
         <div class="carousel-inner rounded-3 shadow-sm">
           <div class="carousel-item active">
+<<<<<<< HEAD
             <img src="img carrousel/jordan-jameison-dQCBiZHElI0-unsplash.jpg" class="d-block w-100" alt="Voiture dans la nature">
+=======
+            <img src="img_carrousel/jordan-jameison-dQCBiZHElI0-unsplash.jpg" class="d-block w-100" alt="Voiture dans la nature">
+>>>>>>> corrections-platform
             <div class="carousel-caption d-none d-md-block bg-success bg-opacity-50 rounded-3 p-2">
               <h5>Favoriser la mobilité durable</h5>
               <p>Le covoiturage écologique pour un avenir plus vert.</p>
             </div>
           </div>
           <div class="carousel-item">
+<<<<<<< HEAD
             <img src="img carrousel/gaspar-zaldo-YN4NJSKGBOQ-unsplash.jpg" class="d-block w-100" alt="Forêt et route">
+=======
+            <img src="img_carrousel/gaspar-zaldo-YN4NJSKGBOQ-unsplash.jpg" class="d-block w-100" alt="Forêt et route">
+>>>>>>> corrections-platform
             <div class="carousel-caption d-none d-md-block bg-success bg-opacity-50 rounded-3 p-2">
               <h5>Réduire l'empreinte carbone</h5>
               <p>Un choix responsable pour vos trajets quotidiens.</p>
             </div>
           </div>
           <div class="carousel-item">
+<<<<<<< HEAD
             <img src="img carrousel/alex-jumper-JgEtmgOjoew-unsplash.jpg" class="d-block w-100" alt="Voiture électrique">
+=======
+            <img src="img_carrousel/alex-jumper-JgEtmgOjoew-unsplash.jpg" class="d-block w-100" alt="Voiture électrique">
+>>>>>>> corrections-platform
             <div class="carousel-caption d-none d-md-block bg-success bg-opacity-50 rounded-3 p-2">
               <h5>Partagez vos trajets facilement</h5>
               <p>Moins de voitures, plus de convivialité.</p>

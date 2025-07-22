@@ -97,7 +97,7 @@ const allRides = [
   {
     id: 100,
     driver: "Jean",
-    photo: "img profils/samuel-raita-RiDxDgHg7pw-unsplash.jpg",
+    photo: "img_profils/samuel-raita-RiDxDgHg7pw-unsplash.jpg",
     rating: 4.4,
     seatsLeft: 1,
     price: 20,
@@ -111,7 +111,7 @@ const allRides = [
   {
     id: 101,
     driver: "Lucie",
-    photo: "img profils/christopher-campbell-rDEOVtE7vOs-unsplash.jpg",
+    photo: "img_profils/christopher-campbell-rDEOVtE7vOs-unsplash.jpg",
     rating: 4.0,
     seatsLeft: 4,
     price: 15,
@@ -125,7 +125,7 @@ const allRides = [
   {
     id: 102,
     driver: "Angélique",
-    photo: "img profils/icons8-team-FcLyt7lW5wg-unsplash.jpg",
+    photo: "img_profils/icons8-team-FcLyt7lW5wg-unsplash.jpg",
     rating: 4.0,
     seatsLeft: 1,
     price: 18,
@@ -139,7 +139,7 @@ const allRides = [
   {
     id: 103,
     driver: "Ilona",
-    photo: "img profils/gabriel-silverio-K_b41GaWC5Y-unsplash.jpg",
+    photo: "img_profils/gabriel-silverio-K_b41GaWC5Y-unsplash.jpg",
     rating: 3.7,
     seatsLeft: 3,
     price: 10,
@@ -153,7 +153,7 @@ const allRides = [
   {
     id: 104,
     driver: "Thierry",
-    photo: "img profils/mitchell-luo-ymo_yC_N_2o-unsplash.jpg",
+    photo: "img_profils/mitchell-luo-ymo_yC_N_2o-unsplash.jpg",
     rating: 4.7,
     seatsLeft: 1,
     price: 20,
@@ -167,7 +167,7 @@ const allRides = [
   {
     id: 105,
     driver: "Patrick",
-    photo: "img profils/charlie-green-3JmfENcL24M-unsplash.jpg",
+    photo: "img_profils/charlie-green-3JmfENcL24M-unsplash.jpg",
     rating: 4.2,
     seatsLeft: 3,
     price: 18,
@@ -181,7 +181,7 @@ const allRides = [
   {
     id: 106,
     driver: "Marie",
-    photo: "img profils/caique-nascimento-KJE--xk4AWE-unsplash.jpg",
+    photo: "img_profils/caique-nascimento-KJE--xk4AWE-unsplash.jpg",
     rating: 3.5,
     seatsLeft: 4,
     price: 20,
@@ -281,7 +281,11 @@ const allRides = [
 
       document.querySelectorAll(".details-btn").forEach((btn) => {
         btn.addEventListener("click", () => {
+<<<<<<< HEAD
         location.replace("./web/codrive_details.php")
+=======
+          alert("Page détails covoiturage à implémenter (US5) pour l'ID " + btn.dataset.id);
+>>>>>>> corrections-platform
         });
       });
     }

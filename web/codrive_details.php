@@ -28,7 +28,7 @@
   <h1>Détails de la course</h1>
   <div id="driver">
     <div id="driver-info">
-      <img id="driver-pic" src="img profils/samuel-raita-RiDxDgHg7pw-unsplash.jpg" alt="driver-picture">
+      <img id="driver-pic" src="img_profils/samuel-raita-RiDxDgHg7pw-unsplash.jpg" alt="driver-picture">
       <div id="driver-name">
         <h1>Pseudo : Jean</h1>
         <h2>Note : 4.4 <span style="font-size:135%;color:rgb(228, 196, 14);">★</span></h2>
@@ -74,7 +74,7 @@
     <div class="card feedback">
       <div class="card-body">
         <div class="user-info">
-          <img class="user-pic" src="img profils/elizeu-dias-2EGNqazbAMk-unsplash.jpg" alt="user-picture">
+          <img class="user-pic" src="img_profils/elizeu-dias-2EGNqazbAMk-unsplash.jpg" alt="user-picture">
           <h2 class="user-name">Pierre</h2><span style="font-size:175%;color:rgb(228, 196, 14);">★★★★★</span>
         </div>
         <p>

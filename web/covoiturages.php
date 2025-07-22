@@ -281,7 +281,7 @@ const allRides = [
 
       document.querySelectorAll(".details-btn").forEach((btn) => {
         btn.addEventListener("click", () => {
-          alert("Page détails covoiturage à implémenter (US5) pour l'ID " + btn.dataset.id);
+        location.replace("./web/codrive_details.php")
         });
       });
     }

@@ -19,7 +19,7 @@
     </div>
     <ul class="nav flex-column">
       <li class="nav-item"><a class="nav-link" href="accueil.html"><i class="bi bi-house-door-fill me-2"></i>Accueil</a></li>
-      <li class="nav-item"><a class="nav-link" href="covoiturages.html"><i class="bi bi-car-front-fill me-2"></i>Covoiturages</a></li>
+      <li class="nav-item"><a class="nav-link active" href="covoiturages.html"><i class="bi bi-car-front-fill me-2"></i>Covoiturages</a></li>
       <li class="nav-item"><a class="nav-link" href="connexion.html"><i class="bi bi-person-circle me-2"></i>Connexion</a></li>
       <li class="nav-item"><a class="nav-link" href="contact.html"><i class="bi bi-envelope-fill me-2"></i>Contact</a></li>
     </ul>
@@ -28,7 +28,28 @@
   <main id="main-content">
     <section aria-label="Liste des covoiturages" class="page" id="rides">
       <h1 class="mb-4 text-success">Covoiturages disponibles</h1>
-      <!-- Filtres (US4) -->
+      
+      <section aria-label="Recherche d'itinéraire" class="card p-4 mb-4 shadow-sm">
+        <h2 class="mb-3">Recherche d'un covoiturage</h2>
+        <form class="row g-3" id="searchForm">
+          <div class="col-md-4">
+            <label for="startCity" class="form-label">Ville de départ</label>
+            <input type="text" id="startCity" name="startCity" class="form-control" required />
+          </div>
+          <div class="col-md-4">
+            <label for="endCity" class="form-label">Ville d’arrivée</label>
+            <input type="text" id="endCity" name="endCity" class="form-control" required />
+          </div>
+          <div class="col-md-4">
+            <label for="travelDate" class="form-label">Date de départ</label>
+            <input type="date" id="travelDate" name="travelDate" class="form-control" required />
+          </div>
+          <div class="col-12 d-flex justify-content-end">
+            <button type="submit" class="btn btn-success">Rechercher</button>
+          </div>
+        </form>
+      </section>
+
       <section aria-label="Filtres de recherche" class="card p-4 mb-4 shadow-sm">
         <h2 class="mb-3">Filtres</h2>
         <form class="row g-3" id="filterForm">
@@ -64,7 +85,7 @@
           </div>
         </form>
       </section>
-      <!-- Liste covoiturages résultats -->
+
       <section aria-live="polite" aria-relevant="additions" aria-atomic="true" id="ridesList">
         <p class="text-muted">Effectuez une recherche pour afficher des covoiturages.</p>
       </section>
@@ -72,6 +93,145 @@
   </main>
 
   <script>
+const allRides = [
+  {
+    id: 100,
+    driver: "Jean",
+    photo: "img profils/samuel-raita-RiDxDgHg7pw-unsplash.jpg",
+    rating: 4.4,
+    seatsLeft: 1,
+    price: 20,
+    startCity: "Lyon",
+    endCity: "Paris",
+    dateDeparture: "2025-07-22T09:00",
+    dateArrival: "2025-07-22T14:00",
+    ecological: false,
+    durationHours: 5
+  },
+  {
+    id: 101,
+    driver: "Lucie",
+    photo: "img profils/christopher-campbell-rDEOVtE7vOs-unsplash.jpg",
+    rating: 4.0,
+    seatsLeft: 4,
+    price: 15,
+    startCity: "Marseille",
+    endCity: "Toulouse",
+    dateDeparture: "2025-07-23T11:00",
+    dateArrival: "2025-07-23T15:00",
+    ecological: true,
+    durationHours: 4
+  },
+  {
+    id: 102,
+    driver: "Angélique",
+    photo: "img profils/icons8-team-FcLyt7lW5wg-unsplash.jpg",
+    rating: 4.0,
+    seatsLeft: 1,
+    price: 18,
+    startCity: "Lille",
+    endCity: "Paris",
+    dateDeparture: "2025-07-24T07:00",
+    dateArrival: "2025-07-24T10:00",
+    ecological: true,
+    durationHours: 3
+  },
+  {
+    id: 103,
+    driver: "Ilona",
+    photo: "img profils/gabriel-silverio-K_b41GaWC5Y-unsplash.jpg",
+    rating: 3.7,
+    seatsLeft: 3,
+    price: 10,
+    startCity: "Bordeaux",
+    endCity: "Montauban",
+    dateDeparture: "2025-07-25T09:00",
+    dateArrival: "2025-07-25T12:00",
+    ecological: true,
+    durationHours: 3
+  },
+  {
+    id: 104,
+    driver: "Thierry",
+    photo: "img profils/mitchell-luo-ymo_yC_N_2o-unsplash.jpg",
+    rating: 4.7,
+    seatsLeft: 1,
+    price: 20,
+    startCity: "Limoges",
+    endCity: "Nantes",
+    dateDeparture: "2025-07-25T09:00",
+    dateArrival: "2025-07-25T13:00",
+    ecological: true,
+    durationHours: 4
+  },
+  {
+    id: 105,
+    driver: "Patrick",
+    photo: "img profils/charlie-green-3JmfENcL24M-unsplash.jpg",
+    rating: 4.2,
+    seatsLeft: 3,
+    price: 18,
+    startCity: "Marseille",
+    endCity: "Paris",
+    dateDeparture: "2025-07-27T07:00",
+    dateArrival: "2025-07-27T15:00",
+    ecological: true,
+    durationHours: 8
+  },
+  {
+    id: 106,
+    driver: "Marie",
+    photo: "img profils/caique-nascimento-KJE--xk4AWE-unsplash.jpg",
+    rating: 3.5,
+    seatsLeft: 4,
+    price: 20,
+    startCity: "Bayonne",
+    endCity: "Narbonne",
+    dateDeparture: "2025-07-28T07:00",
+    dateArrival: "2025-07-28T11:00",
+    ecological: true,
+    durationHours: 4
+  }
+];
+    document.getElementById("searchForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const start = e.target.startCity.value.trim().toLowerCase();
+      const end = e.target.endCity.value.trim().toLowerCase();
+      const date = e.target.travelDate.value;
+
+      if (!start || !end || !date) {
+        alert("Merci de remplir tous les champs.");
+        return;
+      }
+
+      let results = allRides.filter(ride =>
+        ride.startCity.toLowerCase() === start &&
+        ride.endCity.toLowerCase() === end &&
+        ride.dateDeparture.startsWith(date) &&
+        ride.seatsLeft > 0
+      );
+
+      if (results.length === 0) {
+        const futureRides = allRides
+          .filter(r =>
+            r.startCity.toLowerCase() === start &&
+            r.endCity.toLowerCase() === end &&
+            r.seatsLeft > 0
+          )
+          .sort((a, b) => new Date(a.dateDeparture) - new Date(b.dateDeparture));
+
+        if (futureRides.length > 0) {
+          const closest = futureRides[0];
+          alert("Aucun covoiturage trouvé à cette date. Le plus proche disponible est le " +
+            new Date(closest.dateDeparture).toLocaleDateString("fr-FR") + ".");
+          results = [closest];
+        }
+      }
+
+      displayRides(results);
+    });
+
+
     const sidebar = document.getElementById("sidebar");
     const sidebarToggle = document.getElementById("sidebarToggle");
     sidebarToggle.addEventListener("click", () => {
